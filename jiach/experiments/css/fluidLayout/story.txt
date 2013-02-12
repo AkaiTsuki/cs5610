@@ -1,0 +1,6 @@
+﻿../../../story/whatisnext.htm?../experiments/css/fluidLayout/whatisnext.txt		What's next
+fluidLayout1.htm  Basic Fluid Layout Experiment
+fluidLayout2.htm  Fluid Layout With Image
+fluidLayout3.htm  Fluid Layout With shrink Image
+fluidLayout4.htm  2-Column Fluid Layout
+fluidLayout5.htm  3-Column Fluid Layout

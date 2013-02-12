@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<title>My Image Slider</title>
+	<style type="text/css">
+	body{
+		width: 920px;
+		margin: 0 auto;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+
+	ul li{
+		list-style: none;
+		float: left;
+		position: relative;
+	}
+
+	ul li a{
+		text-decoration: none;
+	}
+
+	ul li a.next, ul li a.startOver{
+		right: 0;
+	}
+
+	ul li a.previou{
+		left: 0;
+	}
+
+	.imageControl{
+		position: absolute;
+		display: block;
+		background-color: black;
+		color: white;
+		width: 100px;
+		padding: 10px 10px;
+		text-align: center;
+		font-size: 1.4em;
+		opacity: 0.7;
+		z-index: 2;
+		top: 400px;
+	}
+
+	.slider{
+		-webkit-border-radius: .5em; 
+		-moz-border-radius: .5em;
+		border-radius: .5em; 
+		box-shadow: inset 0 0 10px 5px #000;
+		background-color: #f6f6f6;
+		padding: 20px;
+		border: 1px solid black;
+		display: inline-block;
+	}
+
+	</style>
+	<script type="text/javascript">
+
+	$(window).load(function(){
+		var image=$('ul li img');
+		
+		setupWrapper(image);
+		setupImageControl(image);
+		setupImageUL(image);
+	});
+
+	function setupWrapper(image){
+
+		$('.slider ul').wrap("<div id='wrapper' />");
+
+		$("#wrapper").css({
+			width: function(){
+				return image.width();
+			},
+			height: function(){
+				return image.height();
+			},
+			position: 'relative',
+			overflow: 'hidden'
+		});
+	}
+
+	function setupImageUL(image){
+		$('#wrapper ul').css({
+			width: function(){
+				return image.length*image.width();
+			}
+		});
+	}
+
+	function setupImageControl(image){
+		var width=image.width();
+		$(image).each(function(index){
+			insertButton(this,index,image.length);
+			$(this).nextAll('a').click(function(){
+				var ul=$(this).parent('li').parent('ul');
+				if($(this).is('.next')){
+					ul.animate({
+						'margin-left': (-(index+1)*width)
+					},1000);
+				}else if($(this).is('.previou')){
+					ul.animate({
+						'margin-left': (-(index-1)*width)
+					},1000);
+				}else{
+					ul.animate({
+						'margin-left': 0
+					},1500);
+				}
+				return false;
+			});
+		});
+	}
+
+	function insertButton(target,index,total){
+		if(index==0){
+			$(target).after(createNextButton());
+		}else if(index==total-1){
+			$(target).after(createPreviouButton()).after(createStartOverButton());
+		}else{
+			$(target).after(createPreviouButton()).after(createNextButton());
+		}
+	}
+
+	function createNextButton(){
+		return $("<a href='#'>").addClass("imageControl next").html("Next");
+	}
+
+	function createPreviouButton(){
+		return $("<a href='#'>").addClass("imageControl previou").html("Previou");
+	}
+
+	function createStartOverButton(){
+		return $("<a href='#'>").addClass("imageControl startOver").html("Start Over");
+	}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>This is my image slider</h1>
+		<h3>Purpose</h3>
+		<p>This page is to implememt a image slider to show images. When user click the next button in slider, the image at the right of current one will show up. When user click the previou button, the left one will slide to show. And when the user at the last image and click the start over button, it will go back to the first image.</p>
+		<h3>Reference</h3>
+		<p><a href="http://fearlessflyer.com/2010/08/how-to-create-your-own-jquery-content-slider/" target="_blank">How to Create Your Own jQuery Content Slider</a></p>
+		<h3>Source</h3>
+		<a href="../../fileview/Default.aspx?~/experiments/jquery/imageSlider.htm" target=_blank>View Source</a>
+	</header>
+	<section class="slider">
+		<ul>
+			<li><img src="images/1.jpg" alt=""></li>
+			<li><img src="images/2.jpg" alt=""></li>
+			<li><img src="images/3.jpg" alt=""></li>
+			<li><img src="images/4.jpg" alt=""></li>
+			<li><img src="images/5.jpg" alt=""></li>
+		</ul>
+	</section>
+	<footer>
+		<p>Above is the implemented Slider.</p>
+	</footer>
+</body>
+</html>

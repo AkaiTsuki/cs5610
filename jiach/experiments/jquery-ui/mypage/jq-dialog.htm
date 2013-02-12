@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/ui-lightness/jquery-ui-1.10.0.custom.css" type="text/css">
+    <script type="text/javascript" src="jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.10.0.custom.min.js"></script>
+    <title>Hello Dialog</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#dlg_hello").dialog({ autoOpen: false, modal: true, show: true, hide: true });
+            $('#btn_hello').button().click(function () {
+                $('#dlg_hello').dialog("open");
+            });
+
+            var submit_btn = function () { $("#btn_dialog_result").html("The OK button is clicked!"); $("#btn_dlg_content").dialog("close") };
+            var cancel_btn = function () { $("#btn_dlg_content").dialog("close") };
+            var dlg_prop = { autoOpen: false, modal: true, show: true, hide: true, title: 'Dialog With Button',
+                buttons: {
+                    "Ok": submit_btn,
+                    "Cancel": cancel_btn
+                }
+            };
+
+            $("#btn_dlg_content").dialog(dlg_prop);
+            $("#btn_dialog").button().click(function () {
+                $("#btn_dialog_result").html("");
+                $("#btn_dlg_content").dialog("open");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1>
+        This page contains some basic use of Jquery UI dialog.</h1>
+    <hr />
+    <p>
+        <h3>
+            Purpose</h3>
+        The first experiment is about create a dialog by clicking the button. This UI is
+        using <b>jquery-ui library</b> and using the theme of <b>ui-lightness</b>. In additon
+        to the popup behavior, I added default animate effect on dialog showing and hiding.
+        And when the dialog show up, the back content will unable to react user's request
+        until the dialog is closed.</p>
+    <p>
+        <h3>
+            Reference</h3>
+        <a href="http://www.packtpub.com/jquery-ui-1-8-user-interface-library/book" target="_blank">
+            jQuery UI 1.8- The User Interface Library for jQuery</a></p>
+    <button id="btn_hello">
+        Click me!</button>
+    <div id="dlg_hello">
+        Hello World!</div>
+    <hr />
+    <button id="btn_dialog">
+        Click me!</button>
+    <div id="btn_dialog_result">
+    </div>
+    <div id="btn_dlg_content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam rerum ullam
+        earum quis assumenda maiores repellat quaerat dolor blanditiis magnam pariatur animi
+        minima quia voluptatem aut cum natus itaque!</div>
+    <hr />
+    <p>
+        <h3>
+            Source Code</h3>
+        <a href="../../../fileview/default.aspx?~/experiments/jquery-ui/mypage/jq-dialog.htm"
+            target="_blank">View Source</a></p>
+</body>
+</html>

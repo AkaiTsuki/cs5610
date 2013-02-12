@@ -1,0 +1,12 @@
+﻿../story/whatisnext.htm?../experiments/whatisnext.txt		What's next
+css/menubar.htm		CSS3 Navigation Bar Experiments
+css/box-shadow.htm		CSS3 Box Shadow Experiments
+../story/index.htm?../experiments/css/fluidLayout/story.txt CSS3 Fluid Layout Experiments
+jquery-ui/mypage/jq-dialog.htm		Jquery UI Dialog
+jquery/slideAlertPane.htm		Jquery Slide Down Alert Pane
+jquery/expandable-tab.htm		Jquery Expandable Tab
+jquery/jq-selector.htm		Jquery Selectors
+jquery/imageSlider.htm		Jquery Image Slider
+asp/showInput.aspx			ASP read and show input from User
+asp/pageRedirect/pageRedirect.aspx			ASP Login and Redirect
+story.txt		The story file for this story

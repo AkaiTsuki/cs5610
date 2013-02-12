@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<title>Expandable Tab Experiments</title>
+	<style type="text/css">
+	.expandable{
+		width: 400px;
+		text-align: justify;
+		border: 2px solid black;
+		margin-top:5px;
+	}
+
+	.expandable h3{
+		margin: 0;
+		display: block;
+		background-color: black;
+		color: white;
+		font-size: 1.3em;
+		font-style: italic;
+		border: 1px solid white;
+		padding: 2px 3px;
+	}
+
+	.expandable h3:hover{
+		cursor: pointer;
+	}
+
+	.expandable div{
+		padding: 5px 10px;
+	}
+
+	.hdie{
+		display: none;
+	}
+	</style>
+
+	<script type="text/javascript">
+	var Expandable={};
+
+	Expandable.initial=function(){
+		$(".expandable div").css("display","none");
+		$('.expandable h3').click(Expandable.toggle);
+		$('.exBtn').click(Expandable.exBtn);
+		$('.colBtn').click(Expandable.colBtn);
+	};
+
+	Expandable.exBtn=function(){
+		$(".expandable div").slideDown('slow');
+		$('.expandable h3').css('color','red');
+	};
+
+	Expandable.colBtn=function(){
+		$(".expandable div").slideUp('slow');
+		$('.expandable h3').css('color','white');
+	}
+
+	Expandable.toggle=function(event){
+		var tobehide=$(event.target).next();
+		if (tobehide.is(':hidden')){
+			$(this).css("color","red");
+			tobehide.slideDown('slow');
+		}
+		else{
+			$(this).css("color","white");
+			tobehide.slideUp('slow');
+		}
+	};
+
+	Expandable.collapse=function(){
+		var toHide=$(this).next();
+		$(this).css('color','red');
+		toHide.slideDown('slow');
+	};
+
+	$(Expandable.initial);
+	
+	</script>
+</head>
+<body>
+	<article>
+		<section>
+			<h3>Experiment</h3>
+			<button class="exBtn">Expand All</button>
+			<button class="colBtn">Collapse All</button>
+			<div class="expandable">
+				<h3>First Tab</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sint possimus praesentium ipsa quo animi iure molestias adipisci sunt beatae! Odio ut aut deserunt reiciendis ratione rerum ad natus unde id nesciunt suscipit dolore numquam optio tempora repellat fuga rem possimus sapiente aspernatur doloremque fugiat nemo cum maxime minima magnam?</p>
+				</div>
+			</div>
+			<div class="expandable">
+				<h3>Second Tab</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sint possimus praesentium ipsa quo animi iure molestias adipisci sunt beatae! Odio ut aut deserunt reiciendis ratione reru.</p>
+				</div>
+			</div>
+			<div class="expandable">
+				<h3>Third Tab</h3>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem sint possimus praesentium ipsa quo animi iure molestias adipisci sunt beatae! Odio ut aut deserunt reiciendis ratione rerum ad natus unde id nesciunt suscipit dol!</p>
+				</div>
+			</div>
+		</section>
+		<hr />
+		<section>
+			<h3>Purpose</h3>
+			<p>This experiment create a expandable tab. To expand a tab, click the title bar of the tab and the content will slide down.</p>
+			<p>The "Expand All" button and "Collapse All" button will expand or collapse all tab when clicked.</p>
+			<h3>Reference</h3>
+			<a href="http://www.northeastern.edu/rasala/story/showfile.htm?../expandable/expandable.js" target="_blank">Professor Rasala's Expandable.js File</a>
+            <h3>Source</h3>
+            <a href="../../fileview/Default.aspx?~/experiments/jquery/expandable-tab.htm" target="_blank">View Source</a>
+		</section>
+	</article>
+</body>
+</html>

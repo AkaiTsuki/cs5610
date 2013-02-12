@@ -1,0 +1,169 @@
+body{
+		width: 920px;
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 0 auto;
+		background-color: #1B1B1C;
+		color:#ddd;
+	}
+
+	header{
+		padding: 0;
+	}
+
+	.logo{
+		display: inline-block;
+		position: relative;
+		top:27px;
+		width: 27%;
+	}
+
+	.logo img{
+		max-width: 100%;
+	}
+
+	.master_navigation{
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		/*background: -webkit-linear-gradient(top, #595C64, #1B1B1C);*/
+		text-align: right;
+		height:20px;
+	}
+
+	.master_navigation li{
+		list-style-type: none;
+		display: inline-block;
+		padding: 0.7em 0.7em;
+		font-size: 14px;
+	}
+
+	.master_navigation li a{
+		text-decoration: none;
+		display: block;
+		font-weight: bold;
+		text-shadow: 0 -1px 0 #000;
+		color: orange;
+	}
+
+	.master_navigation li a:hover{
+		text-shadow: 0px 0 3px #FFF;
+		color: #FFF;
+		border-bottom: 1px solid #fff;
+	}
+
+	.photo{
+		width: 50%;
+		padding: 0.5em 0;
+		float: left;
+		
+	}
+
+	.photo img{
+		max-width: 100%;
+		-moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+		border-radius: 10px;
+		
+	}
+
+	.self-intro-text, .site-intro-text{
+		float: right;
+		width: 46%;
+		padding: 0 1em;
+		text-align: justify;
+		vertical-align: top;
+	}
+	.clear-both{
+		clear: both;
+	}
+	
+	.content h3, .refer-content h3
+	{
+	    margin:0;
+	    padding:0;
+	}
+
+	.content-wrapper{
+		width: 23.7%;
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 0.5em 0 0;
+	}
+
+	.content-wrapper div{
+		padding: 0 0.5em 0 0;
+	}
+
+	.content-wrapper p img{
+		max-width: 100%;
+	}
+
+	.content-wrapper p a{
+		margin-top: 5px;
+	}
+
+	.link{
+		font-size: 17px;
+		text-decoration: none;
+		font-weight: bold;
+		color: orange;
+		display: block;
+	}
+
+	.link:hover{
+		text-shadow: 0px 0 5px #FFF;
+		color: #FFF;
+	}
+
+	.img-hightlight{
+		box-shadow: 0 0 3px 3px orange;
+	}
+
+	.link-highlight{
+		text-shadow: 0px 0 3px #FFF;
+		color: #FFF;
+		font-size: 1.1em;
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+	.reference{
+		text-decoration: underline;
+		font-size: 14px;
+	}
+
+	.refer-wrapper{
+		width: 24.5%;
+		display: inline-block;
+		vertical-align: top;
+		color: orange;
+		margin: 10px 0 0 0;
+		padding: 0;
+		text-align: left;
+	}
+
+	.refer-wrapper h3{
+		font-size: 1em;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 0.5em;
+	}
+
+	.refer-wrapper ul{
+		margin: 0;
+		padding: 0;
+		padding-left: 16px;
+	}
+
+	.refer-wrapper ul li{
+		list-style-type: square;
+			}
+
+	.refer-wrapper ul li a{
+		color: #ccc;
+	}
+
+	footer{
+		font-size: 11px;
+		text-align: center;
+	}

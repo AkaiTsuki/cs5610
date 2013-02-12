@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS3 Navigation Bar</title>
+    <style type="text/css">
+        .experiments ul li
+        {
+            display: inline;
+            border: 2px solid black;
+            margin: 0 2px;
+            float: left;
+            text-align: center;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: -webkit-linear-gradient(top, rgba(214,214,214,1) 0%,rgba(255,255,255,1) 91%);
+            background: -moz-linear-gradient(top, rgba(214,214,214,1) 0%, rgba(255,255,255,1) 91%);
+        }
+        
+        .experiments ul li:hover
+        {
+            opacity: 0.4;
+        }
+        
+        .experiments ul li a
+        {
+            display: block;
+            width: 120px;
+            padding: 10px 5px;
+            text-decoration: none;
+        }
+        
+        .experiments ul
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .clear-both
+        {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">
+        <h1>
+            The CSS3 Navigation Bar Experiments</h1>
+        <hr />
+        <p>
+            <h3>
+                Purpose</h3>
+            This page is designed to show navigation item in web pages, which including:</p>
+        <ul>
+            <ol>
+                Horizontal Navigation Bar</ol>
+            <ol>
+                Navigation item hover behavior</ol>
+            <ol>
+                Round corner Navigation item</ol>
+        </ul>
+        <p>
+            <h3>
+                Reference</h3>
+            <a href="http://www.w3schools.com/css/css_navbar.asp">W3C School</a> <a href="http://www.colorzilla.com/gradient-editor/">
+                ColorZilla</a>
+        </p>
+        <p>
+            <h3>
+                Source Code</h3>
+            <a href="../../fileview/default.aspx?~/experiments/css/menubar.htm">View Source</a></p>
+    </div>
+    <div class="experiments">
+        <p>
+            The first experiment is a basic horizontal navigation bar with a opacity changing
+            when hover.</p>
+        <ul>
+            <li><a href="#" target="_blank">Source</a></li>
+            <li><a href="#" target="_blank">Statistics</a></li>
+            <li><a href="#" target="_blank">SiteStatistics</a></li>
+            <li><a href="#" target="_blank">Search</a></li>
+        </ul>
+    </div>
+    <div class="clear-both">
+    </div>
+    <hr />
+</body>
+</html>

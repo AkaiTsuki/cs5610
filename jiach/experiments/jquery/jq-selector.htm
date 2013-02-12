@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<title>Jquery Selector Experiment</title>
+	<style type="text/css">
+
+	body{
+		width: 920px;
+	}
+
+	.horizon{
+		background-color: #D2FAFF;
+		border: 2px solid #43797F;
+		padding: 5px 10px;
+		display: inline-block;
+		vertical-align:top;
+	}
+
+	.hightlight{
+		background-color: #FFC0CB;
+		border: 2px solid red;
+	}
+
+	</style>
+	<script type="text/javascript">
+	
+
+	function submitSelector(){
+		removeHighlight();
+		var inputSelector=$('#selectorInput').val();
+		var selectors="#testArea "+$.trim(inputSelector);
+		if(inputSelector.length==0){
+			selectors="";
+		}
+
+		var targets=$(selectors);
+		targets.addClass("hightlight");
+		parseToCode(selectors);
+		countSelectedElements(targets);
+		return false;
+	}
+
+	function removeHighlight(){
+		$('.hightlight').removeClass("hightlight");
+		$('p').remove(".parsedCode");
+	}
+
+	function parseToCode(val){
+		$("<p class='parsedCode'>$('"+val.substr(10)+"').addClass('.hightlight');</p>").appendTo('#parseShow');
+	}
+
+	function countSelectedElements(target){
+		$('#matchShow span').html(target.length+" elements is selected.");
+	}
+
+	$(function(){
+		$('#submitBtn').click(submitSelector);
+	});
+
+
+
+	</script>
+</head>
+<body>
+	<article>
+		<section>
+			<div id="inputArea" class="horizon">
+				<h3>Input Area</h3>
+				<form action="#">
+					<p><label for="selectorInput">Input Selectors: </label></p>
+					<p><input type="text" id="selectorInput" name="selectorInput"/></p>
+					<p><button type="submit" id="submitBtn">Submit</button></p>
+				</form>
+				<div id="parseShow">The parsed jquery code is: </div>
+				<div id="matchShow">The number of element being selected is: <span></span></div>
+			</div>
+			<div id="testArea" class="horizon">
+				<h3>DOM for Test</h3>
+				<div>This is a div.</div>
+				<div class="divClass">This is a div with class <i>divClass</i>.</div>
+				<span id="someId">This is a span with id <i>someId</i></span>
+				<p class="someClass">This is a p with class <i>someClass</i></p>
+				<p class="someClass">This is a p with class <i>someClass</i></p>
+				<p class="someClass">This is a p with class <i>someClass</i></p>
+				<ul>
+					<li>list 0
+						<ul>
+							<li>list 1</li>
+							<li>list 2</li>
+							<li>list 3</li>
+						</ul>
+					</li>
+					<li><a href="">anchor 1</a></li>
+					<li><a href="">anchor 2</a></li>
+					<li><a href="">anchor 3</a></li>
+					<li><a href="">anchor 4</a></li>
+					<li><a href="">anchor 5</a></li>
+				</ul>
+				<form action="">
+					<div>
+						<label for="testInput">Label 1</label>
+						<input type="text" id="testInput" name="testInput">
+					</div>
+					<div>
+						<label for="radioGroup">Radios</label>
+						<input type="radio" name="radioGroup" id="A" value="radio A">radio A
+						<input type="radio" name="radioGroup" id="B" value="radio B">radio B
+						<input type="radio" name="radioGroup" id="C" value="radio C">radio C
+					</div>
+					<div>
+						<label for="checkBoxGroup">CheckBoxes</label>
+						<input type="checkbox" name="checkBoxGroup" id="A" value="checkbox A">checkbox A
+						<input type="checkbox" name="checkBoxGroup" id="B" value="checkbox B">checkbox B
+						<input type="checkbox" name="checkBoxGroup" id="C" value="checkbox C">checkbox C
+					</div>
+					<button type="submit" id="submitButton">Submit</button>
+				</form>
+			</div>
+		</section>
+		<section id="codeArea">
+			<h3>The code for test is show as following:</h3>
+<pre>
+&lt;h3&gt;DOM for Test&lt;/h3&gt;
+&lt;div&gt;This is a div.&lt;/div&gt;
+&lt;div class=&quot;divClass&quot;&gt;This is a div with class &lt;i&gt;divClass&lt;/i&gt;.&lt;/div&gt;
+&lt;span id=&quot;someId&quot;&gt;This is a span with id &lt;i&gt;someId&lt;/i&gt;&lt;/span&gt;
+&lt;p class=&quot;someClass&quot;&gt;This is a p with class &lt;i&gt;someClass&lt;/i&gt;&lt;/p&gt;
+&lt;p class=&quot;someClass&quot;&gt;This is a p with class &lt;i&gt;someClass&lt;/i&gt;&lt;/p&gt;
+&lt;p class=&quot;someClass&quot;&gt;This is a p with class &lt;i&gt;someClass&lt;/i&gt;&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;list 0
+		&lt;ul&gt;
+			&lt;li&gt;list 1&lt;/li&gt;
+			&lt;li&gt;list 2&lt;/li&gt;
+			&lt;li&gt;list 3&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;anchor 1&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;anchor 2&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;anchor 3&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;anchor 4&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;&quot;&gt;anchor 5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;form action=&quot;&quot;&gt;
+	&lt;div&gt;
+		&lt;label for=&quot;testInput&quot;&gt;Label 1&lt;/label&gt;
+		&lt;input type=&quot;text&quot; id=&quot;testInput&quot; name=&quot;testInput&quot;&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+		&lt;label for=&quot;radioGroup&quot;&gt;Radios&lt;/label&gt;
+		&lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; id=&quot;A&quot; value=&quot;radio A&quot;&gt;radio A
+		&lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; id=&quot;B&quot; value=&quot;radio B&quot;&gt;radio B
+		&lt;input type=&quot;radio&quot; name=&quot;radioGroup&quot; id=&quot;C&quot; value=&quot;radio C&quot;&gt;radio C
+	&lt;/div&gt;
+	&lt;div&gt;
+		&lt;label for=&quot;checkBoxGroup&quot;&gt;CheckBoxes&lt;/label&gt;
+		&lt;input type=&quot;checkbox&quot; name=&quot;checkBoxGroup&quot; id=&quot;A&quot; value=&quot;checkbox A&quot;&gt;checkbox A
+		&lt;input type=&quot;checkbox&quot; name=&quot;checkBoxGroup&quot; id=&quot;B&quot; value=&quot;checkbox B&quot;&gt;checkbox B
+		&lt;input type=&quot;checkbox&quot; name=&quot;checkBoxGroup&quot; id=&quot;C&quot; value=&quot;checkbox C&quot;&gt;checkbox C
+	&lt;/div&gt;
+	&lt;button type=&quot;submit&quot; id=&quot;submitButton&quot;&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+			<h3>Purpose</h3>
+			<p>This experiments is for study the selectors of Jquery. The user can submit a selector such as "p" in the text input field. Then all p elements in DOM for Test area will be hightlighted with red color.</p>
+
+			<h3>Reference</h3>
+			<a href="http://www.bibeault.org/jqia2/chapter2/lab.selectors.html" target="_blank">Jquery Selector Lab</a>
+
+			<h3>Source</h3>
+			<a href="../../fileview/Default.aspx?~/experiments/jquery/jq-selector.htm" target="_blank">View Source</a>
+		</section>
+	</article>
+</body>
+</html>

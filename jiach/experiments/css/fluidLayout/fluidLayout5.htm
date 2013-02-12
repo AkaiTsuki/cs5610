@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<title>Three Column Fluid Layout Experiment</title>
+	<style type="text/css">
+		@media screen{
+			body{
+				padding: 0;
+				margin: 0;
+				text-align: justify;
+				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			}
+
+			.pad{
+				padding: 20px;
+			}
+
+			header{
+				text-align: center;
+			}
+		}
+
+		@media screen and (min-width: 920px){
+			body{
+				width: 920px;
+				margin: 0 auto;
+			}
+
+			.left,.right{
+				float: left;
+				width: 190px;
+			}
+
+			.left{
+				padding-right: 10px;
+			}
+
+			.right{
+				padding-left: 10px;
+			}
+
+			.middle{
+				float: left;
+				width: 480px;
+			}
+		}
+
+		@media screen and (max-width: 919px) and (min-width: 768px){
+			body{
+				width: 100%;
+			}
+
+			.left, .right{
+				float: left;
+				width: 23%;
+			}
+
+			.left{
+				padding-right: 2%;
+			}
+
+			.right{
+				padding-left: 2%;
+			}
+
+			.middle{
+				float: left;
+				width: 50%;
+			}
+		}
+
+		@media screen and (max-width: 767px) and (min-width: 480px){
+			body{
+				width: 100%;
+			}
+
+			.left {
+				float: left;
+				width: 23%;
+				padding-right: 2%;
+			}
+
+			.middle{
+				float: left;
+				width: 75%;
+			}
+
+			
+		}
+
+		@media screen and (max-width: 479px){
+			body{
+				width: 100%;
+			}
+		}
+
+		.clear{
+			clear: both;
+		}
+
+		.doc h3{
+			text-decoration: underline;
+		}
+
+		.table1{
+			width: 60%;
+			border-collapse:collapse;
+		}
+
+		.table1 td, .table1 th 
+		{
+			font-size:1em;
+			border:1px solid #98bf21;
+			padding:1% 2%;
+		}
+
+		.table1 tr.alt td 
+		{
+			color:#000000;
+			background-color:#EAF2D3;
+		}
+
+		.table1 th 
+		{
+			font-size:1.1em;
+			text-align:left;
+			padding-top:2%;
+			padding-bottom:1.5%;
+			background-color:#A7C942;
+			color:#ffffff;
+		}
+	</style>
+</head>
+<body>
+	<article class="pad">
+		<header>
+			<h1>Three Column Fluid Layout</h1>
+		</header>
+		<aside class="left">
+			<h3>Left Aside</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime perspiciatis iusto voluptatum quo quos facilis magni ducimus repellat alias voluptatem corporis similique deserunt veniam at aspernatur enim iste accusantium eum labore odio nostrum ipsa ipsum sunt dolor minima reiciendis dolore soluta iure explicabo atque deleniti pariatur earum fuga! Dolore maxime ad qui tempora commodi similique nemo atque earum temporibus eum excepturi impedit hic aliquam vitae esse obcaecati odio velit culpa tempore nesciunt deleniti! Provident nihil reprehenderit labore mollitia inventore itaque aliquam vitae perferendis quos atque quae quas voluptas cupiditate voluptatibus quo numquam iusto. Quaerat illum dolores at sit nisi ut.</p>
+		</aside>
+		<section>
+			<section class="middle">
+			<h3>Middle Section</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum debitis quasi dignissimos excepturi. Temporibus ducimus quas illo labore pariatur! Aliquid fuga mollitia eveniet possimus cum ipsum recusandae quaerat neque atque dolores eos nesciunt sequi architecto quisquam debitis dolore odit. Labore placeat cupiditate numquam molestias consectetur culpa aperiam quaerat excepturi expedita officia. Totam voluptatem corporis id libero aliquid incidunt nostrum eius laboriosam fugit praesentium ex illo voluptatum architecto quisquam soluta cumque adipisci facere veritatis. Sed est dolorum culpa ratione sapiente inventore nihil magni quod dolore debitis laboriosam aspernatur accusamus saepe rerum rem repudiandae tempore impedit quas aperiam beatae pariatur voluptatum soluta.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas iusto impedit ab velit natus sit odit hic minima debitis animi quasi voluptatem porro earum ut molestias quae neque nam ipsa consequatur distinctio exercitationem dolorum quos vel officia eos vero aut minus sunt eum dignissimos inventore nulla recusandae quisquam. Tempora enim!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae atque eligendi quidem minus asperiores ipsam natus? Optio saepe nesciunt architecto eos quidem nobis ut quas beatae recusandae fugiat illo dicta laudantium sed officiis provident esse quo dolorum aspernatur perspiciatis cum.</p>
+		</section>
+		
+		<aside class="right">
+			<h3>Right Aside</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit possimus rerum enim pariatur non at sequi sunt mollitia consequuntur debitis esse impedit maiores tempora fugiat soluta nobis voluptatibus veritatis consequatur doloremque suscipit quos illum laudantium reprehenderit nostrum eum hic eius beatae delectus assumenda reiciendis id commodi laborum sapiente repudiandae vitae dolore cumque atque sit ad similique facere molestias! Hic cum quae dolores facilis exercitationem optio saepe ipsam laboriosam doloremque illum assumenda odit commodi temporibus ex ipsum perferendis doloribus iste consectetur voluptatibus tenetur deleniti magnam perspiciatis facere alias eligendi minima dignissimos eaque vitae quod atque! Minus sint corporis excepturi asperiores quibusdam.</p>
+		</aside>
+		</section>
+		<div class="clear"></div>
+		<hr />
+		<section class="doc">
+			<h3>Purpose</h3>
+			<p>In this experiment, I use the technique that the previous four experiments use to create a three column fluid layout. When the browser's width is larger than 768px, the page will be 3-column layout. When the width between 480px and 767px, it will be 2-column layout. And if the width is less than 480px, it will be single column.</p>
+			<p>By using fluid layout, the page can be viewed under devices that has different resolution.</p>
+			<table class="table1">
+				<tr>
+					<th>Device</th>
+					<th>Resolution</th>
+					<th>Layout</th>
+				</tr>
+				
+				<tr class="alt">
+					<td>Mobile portrait</td>
+					<td>320x480</td>
+					<td>1 column</td>
+				</tr>
+				<tr>
+					<td>Mobile landscape</td>
+					<td>480x320</td>
+					<td>2 column</td>
+				</tr>
+				<tr class="alt">
+					<td>Small tablet portrait</td>
+					<td>600x800</td>
+					<td>2 column</td>
+				</tr>
+				<tr>
+					<td>Small tablet landscape</td>
+					<td>800x600</td>
+					<td>3 column</td>
+				</tr>
+				<tr class="alt">
+					<td>Tablet portrait</td>
+					<td>768x1024</td>
+					<td>3 column</td>
+				</tr>
+				<tr>
+					<td>Tablet landscape</td>
+					<td>1024x768</td>
+					<td>3 column</td>
+				</tr>
+			
+			</table>
+			<h3>Reference</h3>
+			<a href="http://www.w3school.com.cn/tiy/t.asp?f=csse_table_fancy">W3School</a>
+            <h3>Source</h3>
+            <a href="../../../fileview/Default.aspx?~/experiments/css/fluidLayout/fluidLayout5.htm">View Source</a>
+		</section>
+	</article>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<title>Fluid Layout 1</title>
+	<style type="text/css">
+		@media screen{
+			body{
+				padding: 0;
+				margin: 0;
+				
+			}
+
+			.pad{
+				padding: 20px;
+			}
+
+		}
+
+		@media screen and (min-width: 920px){
+			body{
+				width: 920px;
+				margin: 0 auto;
+			}
+		}
+
+		@media screen and (max-width: 919px){
+			body{
+				max-width: 100%;
+			}
+		}
+
+		.doc h3{
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<article class="pad">
+		<header>
+			<h1>Basic Fluid Layout</h1>
+		</header>
+		<hr />
+		<section>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus perspiciatis suscipit odit dolorem neque dolorum cumque autem quaerat cupiditate blanditiis nemo eaque quod rerum temporibus eveniet quo totam dolores nulla rem ex reiciendis culpa officia voluptate vitae illum. Repellat ex aspernatur vero quae est reprehenderit recusandae et ea blanditiis iure explicabo voluptates a eos optio reiciendis quidem saepe! Earum hic tempora consectetur magni omnis eveniet quod atque provident nihil adipisci molestiae cupiditate neque laboriosam nostrum praesentium quia veniam optio ratione aut voluptas quidem doloremque ipsam? Quas cupiditate accusantium tempora dolores obcaecati magnam debitis maiores nostrum beatae amet laboriosam hic dignissimos.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur deleniti hic fugiat corporis minus quaerat dolor ipsum officiis repudiandae similique delectus sunt labore pariatur ad aliquam magni placeat consequuntur at.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab in!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsum unde ratione fugiat nihil rerum nisi neque quas quaerat maiores fuga distinctio ex itaque! Esse quod porro voluptatem sed tempore labore beatae dolore fuga quia repellat architecto odit perferendis delectus voluptas quam aperiam asperiores temporibus est saepe facere dignissimos quaerat vel id deserunt maxime eveniet laudantium laborum amet ipsam blanditiis. Illum perferendis at cumque quod corrupti aperiam sequi nisi sint quo mollitia quis nostrum! Nam obcaecati minus aliquid veniam quas ex doloremque iste earum pariatur consequatur tempora veritatis a non iure voluptatem neque quod. Aperiam praesentium ratione minus suscipit facilis non dolores odit esse ipsam reiciendis possimus adipisci magnam dignissimos. Atque porro labore natus temporibus eos repudiandae expedita dolorum quae minus quis dolor aut unde vitae velit odio officiis deleniti quas non rem at nulla blanditiis nihil sit ratione culpa maiores impedit quibusdam. Praesentium repudiandae vel minima a ut nostrum cum itaque neque blanditiis deleniti magnam veniam facere doloribus. Molestias quidem autem quasi possimus similique architecto suscipit eligendi a aliquam aut ea doloremque itaque laborum explicabo expedita dolore cum iure! Voluptate minima autem consequatur voluptatum maiores molestiae placeat debitis. Possimus porro dolorum consequuntur enim voluptatum officia explicabo ex dignissimos voluptates.</p>
+		</section>
+		<hr />
+		<footer><h3>This is footer</h3></footer>
+		<hr />
+		<section class="doc">
+			<h3>Purpose</h3>
+			<p>This is the first experiment of fluid layout. If the browser width is larger than 920px, then the content will display in the middle. Else the content will fill the screen.</p>
+			<h3>Reference</h3>
+			<a href="http://net4.ccs.neu.edu/home/rasala/experiments/fluid/index1.htm" target="_blank">Fluid Layout Experiments</a>
+            <h3>Source</h3>
+            <a href="../../../fileview/Default.aspx?~/experiments/css/fluidLayout/fluidLayout1.htm">View Source</a>
+		</section>
+	</article>
+</body>
+</html>

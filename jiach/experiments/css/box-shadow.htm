@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Box Shadow Experiments</title>
+	<style type="text/css">
+
+	body{
+		width: 920px;
+		margin: 0 auto;
+	}
+
+	.box{
+		width: 500px;
+		background-color: #EEEEEE;
+		padding: 5px 15px;
+		margin-top: 10px; 
+	}
+
+	.shadow{	
+		-moz-box-shadow: 5px 5px 8px 5px #888;
+		-webkit-box-shadow: 5px 5px 8px 5px #888;
+		box-shadow: 5px 5px 8px 5px #888;
+	}
+
+	.shadow1{
+		-moz-box-shadow: -5px -5px 8px 5px #888;
+		-webkit-box-shadow: -5px -5px 8px 5px #888;
+		box-shadow: -5px -5px 8px 5px #888;
+	}
+
+	.shadow2{
+		-moz-box-shadow: 0 0 8px 5px #FF550D, 20px 20px 30px lime,-20px -20px 40px yellow, 40px -40px 50px blue, -40px 40px 50px red;
+		-webkit-box-shadow: 0 0 8px 5px #FF550D, 20px 20px 30px lime,-20px -20px 40px yellow, 40px -40px 50px blue, -40px 40px 50px red;
+		box-shadow: 0 0 8px 5px #FF550D, 20px 20px 30px lime,-20px -20px 40px yellow, 40px -40px 50px blue, -40px 40px 50px red;
+	}
+	</style>
+</head>
+<body>
+	<article>
+		<header>
+			<h1>CSS3 Box Shadow</h1>
+			<h3>Purpose</h3>
+			<p>This page is designed to test some features of CSS3 box shadow. Details see the content in shadow box</p>
+			<h3>Reference</h3>
+			<a href="http://www.css3.info/preview/box-shadow/" target="_blank">Box-shadow, one of CSS3's best new features</a>
+			<h3>Source</h3>
+			<a href="../../fileview/default.aspx?~/experiments/css/box-shadow.htm" target="_blank">View Source</a>
+		</header>
+		<section>
+			<div class="box shadow">
+				<h2>Shadow on right bottom</h2>
+				<h4>The code is show as below:</h4>
+				<p><i>box-shadow: 10px 10px 5px 5px 888;</i></p>
+				<p>The first value defines the horizontal offset of the shadow, with a positive value offseting the shadow to the right of the element, and a negative value to the left.</p>
+
+				<p>The second value defines the vertifical offset of the shadow, with a positive value offsetting the shadow from the bottom of the element, and a negative value from the top.</p>
+
+				<p>If supplied, an optional third value defines the blur distance of the shadow. Only positive values are allowed, and the larger the value, the more the shadow’s edge is blurred.</p>
+
+				<p>An optional fourth value can be supplied to define the spread distance of the shadow. A positive value will cause the shadow shape to expand in all directions, while a negative value will cause the shadow shape to contract.</p>
+			</div>
+			<br />
+			<div class="box shadow1">
+				<h2>Shadow on left top</h2>
+				<p>This box has shadow on top left.</p>
+			</div>
+			<br />
+			<div class="box shadow2">
+				<h2>Layering multiple shadows</h2>
+				<p>This box create multiple shadows.</p>
+			</div>
+			<br />
+			<br />
+			<br />
+			<br />
+		</section>
+	</article>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <title>Slide Alert Pane</title>
+    <style type="text/css">
+        #overlay
+        {
+            width: 100%;
+            background-color: black;
+            color: #f3f3f3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            display: none;
+        }
+        #overlay p, #overlay h3
+        {
+            padding: 5px 5px 10px 10px;
+            margin: 0;
+        }
+        #overlay h3
+        {
+            margin: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $('button').click(function () {
+                $('#overlay').slideDown('slow');
+                setTimeout(function () {
+                    $('#overlay').slideUp('slow');
+                }, 2000);
+            });
+
+            $('#overlay').click(function () {
+                $(this).slideUp('slow');
+            });
+
+
+        });
+	</script>
+</head>
+<body>
+    <article>
+		<header>
+			<h1>Slide Alert Pane</h1>
+			<div id="overlay">
+				<h3>Alert Pane</h3>
+				<p>This is a slide down pane, click to hide or wait for 2 seconds to automaticlly hiding. </p>
+			</div>
+		</header>
+		<section>
+			<h3>click the button to show alert pane!</h3>
+			<button>Click me</button>
+		</section>
+		<section>
+			<h3>Purpose</h3>
+			<p>This experiments is using the timeOut function of Javascript to automaticlly hide a
+             slide down alert pane. By click the button, a alert pane will slide down from the top of the page.</p>
+			<h3>Reference</h3>
+            <a href="http://api.jquery.com/slideDown/" target="_blank">Jquery API Document</a>
+			<h3>Source</h3>
+			<a href="../../fileview/Default.aspx?~/experiments/jquery/slideAlertPane.htm" target="_blank">View Source</a>
+		</section>
+	</article>
+</body>
+</html>
